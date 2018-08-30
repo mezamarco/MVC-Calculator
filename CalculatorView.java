@@ -46,11 +46,11 @@ public class CalculatorView extends JFrame {
 	private JTextField ninthNum = new JTextField(15);
 	private JTextField calcFactSolution = new JTextField(10);
 	
-	private JButton calculateFibButton = new JButton("Calculate Fibonacci");
+	private JButton calculateFibButton = new JButton("Calculate Nth-Fibonacci");
 	private JTextField tenthNum = new JTextField(15);
 	private JTextField calcFibSolution = new JTextField(10);
 	
-	private JLabel mainLabel = new JLabel("------------------------------------------CALCULATOR------------------------------------------");
+	private JLabel mainLabel = new JLabel("-----------------------------------------------------CALCULATOR-----------------------------------------------------");
 
 	
 	//Constructor
