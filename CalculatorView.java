@@ -2,9 +2,13 @@ package calculator;
 
 
 
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 //This will be the user interface
 import java.awt.event.ActionListener;
 import javax.swing.*;
+
+import com.sun.prism.paint.Color;
 
 public class CalculatorView extends JFrame {
 	
@@ -40,12 +44,10 @@ public class CalculatorView extends JFrame {
 	
 	private JButton calculateFactButton = new JButton("Calculate Factorial");
 	private JTextField ninthNum = new JTextField(15);
-	private JLabel factEqualLabel = new JLabel("=");
 	private JTextField calcFactSolution = new JTextField(10);
 	
 	private JButton calculateFibButton = new JButton("Calculate Fibonacci");
 	private JTextField tenthNum = new JTextField(15);
-	private JLabel fibEqualLabel = new JLabel("=");
 	private JTextField calcFibSolution = new JTextField(10);
 	
 	private JLabel mainLabel = new JLabel("------------------------------------------CALCULATOR------------------------------------------");
@@ -55,9 +57,14 @@ public class CalculatorView extends JFrame {
 	CalculatorView(){
 	
 		
+			GridLayout layout = new GridLayout(1, 2);
+			this.setLayout(layout);
+			this.setSize(540, 290);
+		
 			JPanel calcPanel = new JPanel();
 			//CLick x on panel and then it will make sure it closed
 			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	       
 
 			calcPanel.add(mainLabel);
 
@@ -106,10 +113,10 @@ public class CalculatorView extends JFrame {
 			
 			//We are done with the order and now we have to 
 			//Add this to the current JFrame
-			
+
 			this.add(calcPanel);
 			
-			
+
 	}
 	
 	
@@ -193,9 +200,13 @@ public class CalculatorView extends JFrame {
 		calculateButton.addActionListener(listenerForCalcButton);
 	}
 	
+	
+	
 	void displayErrorMessage(String errorMessage) {
 			JOptionPane.showMessageDialog(this, errorMessage);
 	}
+	
+	
 	
 	
 	
